@@ -1,6 +1,6 @@
 # Universal rapid building damage assessment: From global scale to local application
 
-https://github.com/user-attachments/assets/7642ec47-1c8a-472e-a5f9-5d1501794f7a.mp4
+<video src="assets/unidaf-la.mp4" controls="controls" width="500" height="300"></video>
 
 ## :newspaper:News
 

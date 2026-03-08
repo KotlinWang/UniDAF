@@ -1,30 +1,29 @@
-# Universal rapid building damage assessment: From global scale to local application
+# :star2: Universal rapid building damage assessment: From global scale to local application:star2:
 
 https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 
 ## :newspaper:News
 
-* **` Mar. 06th, 2025`**: Our UniDAF project was created and all the code is uploaded! 😄
+* **` Mar. 06th, 2025`**: Our UniDAF project was created and all the code is uploaded! :smiley:
 
 ## :star:Overview
 
-![overview](./assets/urbanssf.jpg)
-- UrbanSSF is the first to combine CNNs, Transformers and Mamba for the remote sensing of VHR urban scenes. The Global Semantic Enhancer (GSE) module and the Spatial Interactive Attention (SIA) mechanism process different scale features from the encoder. Feature State Interaction (FSI) Mamba uses the powerful sequence modeling ability of state space module to apply to the feature state sequence. The Channel Space Reconstruction (CSR) algorithm is designed to reduce the computational complexity of large-scale feature fusion.
-- UrbanSSF has achieved the effect of SOTA on three urban scene datasets of UAVid, ISPRS Vaihingen and Potsdam. Especially on the UAVid dataset.
+![overview](./assets/unidaf.pdf)
+- UniDAF is the first multi-modal change detection framework for timely post-disaster imagery acquisition. 
+- In view of the interference usually accompanied by timely post-disaster imagery, we combined the fine-grained information of optical imagery and the all-weather observation ability of SAR imagery to establish DamageNet.
+- The occurrence of disasters is highly uncertain, which makes the method of constructing data sets based on sudden disaster events unable to meet the requirements of timely emergency response. Based on this, our DomainStr gradually transfers to the assessment task of sudden disaster events by learning the representation of historical disaster events without additional data annotation.
 
 ##  :dart:Model Zoo
 
-| **Dateset**         | **Method**     | **Params(M)↓** | **FPS↑** | **mIoU↑** | Download |
-| :------------------------ | :------------: | :-------------: | :-----------------: | :---------------: | :---------------: |
-| **Vaihingen**       | UrbanSSF-T | **3.6** | **66.3**        | 83.3          | [model](https://drive.google.com/file/d/1cpvsf6bIml_NZ8ouFIx9SpBL0CL5zFI1/view?usp=drive_link) |
-|                           | UrbanSSF-S | 14.0   | 25.6        | 84.5          | [model](https://drive.google.com/file/d/1iLU7PioDTnvzuBdcbueLyepp0uyCWRQl/view?usp=drive_link) |
-|                           | UrbanSSF-L | 60.0     | 10.2           | **85.0**     | [model](https://drive.google.com/file/d/13G7285_lCU_lhi51T-zehfL_oragNsy-/view?usp=drive_link) |
-| **Potsdam**     | UrbanSSF-T |    **3.6**     | **66.3** | 85.4          | [model](https://drive.google.com/file/d/1S4sSC_Xp3YjWSwEOfmm6yvp6VnIM_XXD/view?usp=drive_link) |
-|               | UrbanSSF-S |      14.0      |   25.6   | 86.9          | [model](https://drive.google.com/file/d/1cMcxlzT3ajtLJvN5PWbDCpUBF__GOMRa/view?usp=drive_link) |
-|               | UrbanSSF-L |      60.0      |   10.2   | **87.6**        | [model](https://drive.google.com/file/d/1f5oHB72AWyWyCXV3Cjd6UFGEHnxc8Vft/view?usp=drive_link) |
-| **UAVid**            | UrbanSSF-T |    **3.6**     | **66.3** | 65.7         | [model](https://drive.google.com/file/d/1Rl88F1Ooetvk1r527jDmhdNLYgTe8BuB/view?usp=drive_link) |
-|               | UrbanSSF-S |      14.0      |   25.6   | 69.8          | [model](https://drive.google.com/file/d/1AlE_0PcB4PDwrevA86PZOAyeloH8tHvE/view?usp=drive_link) |
-|               | UrbanSSF-L |      60.0      |   10.2   | **71.0**      | [model](https://drive.google.com/file/d/1TCrxbzjV907jBYI1AsDQBuZsE5FR6DgU/view?usp=drive_link) |
+| Method | Background↑ | Intact↑ | Damaged↑ | Destroyed↑ | mIoU ↑ | Weights |
+|------|-----------|--------|---------|-----------|--------|----------|
+| UniDAF (LA-Wildfire) | 94.50 | 57.94 | 4.59 | 57.78 | 53.70 | [Download](https://drive.google.com/file/d/1Wly0jafTLFumS5n3ZD8OZPGlXPudx7jB/view?usp=sharing) |
+| DamageNet (MobileNet) | 94.62       | 55.47   | 27.35    | 40.18      | 54.41 | [Download](https://drive.google.com/file/d/1nA4hW5w-32yXguO21BsJpyzk9gA5N7Nq/view?usp=sharing) |
+| DamageNet (ResNet-18) | 94.78 | 53.56 | 24.98 | 45.64 | 54.74 | [Download](https://drive.google.com/file/d/1_j58YiQntcirjrq2nZp6fCVD8WTbfs5O/view?usp=sharing) |
+| DamageNet (PVTv2-b3) | 95.93 | 60.42 | 32.83 | 46.83 | 59.00 | [Download](https://drive.google.com/file/d/1jbhKC7sTcDCaHPbHx38j6b53C0HwpEex/view?usp=sharing) |
+| UniDAF (MobileNet)    | 94.11       | 52.34   | 38.20    | 42.20      | 56.71  | [Download](https://drive.google.com/file/d/1zhX2R8poxp2z9Gd5s8AOCon41Dzt-JfX/view?usp=sharing) |
+| UniDAF (ResNet-18)    | 94.98       | 56.02   | 41.68    | 44.11      | 59.20  | [Download](https://drive.google.com/file/d/1gTMxqo1-yAZsJgUjV3X44uAyaKo7nsgm/view?usp=sharing) |
+| UniDAF (PVTv2-b3)     | **96.10**  | **66.89** | **49.05** | **56.67**  | **67.18** | [Download](https://drive.google.com/file/d/1UFvcJ5R0q5AjaaLt-r5BYAjlqE2Tv0cp/view?usp=sharing) |
 
 ## :see_no_evil:Visualization
 

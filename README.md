@@ -119,16 +119,6 @@ python script/infer_unidaf.py -existing_weight_path ../your weights path -infere
 ## :rocket:Supported Networks:
 
 <details open>
-
-| CNNs | Transformer | Mamba | UAD |
-|-----|-------------|-------|-----|
-| [UNet](https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28) | UNetFormer | UrbanSSF | MeanTeacher |
-| DeepLabv3+ | DamageFormer | ChangeMamba | AdaptSeg |
-| [UANet](https://github.com/Henryjiepanli/Uncertainty-aware-Network) | ChangeFormer |  | AdvEnt |
-| [CFDNet](https://github.com/whf0608/CFDNet) | DamageCAT |  |  |
-| SiamCRNN |  |  |  |
-| ACABFNet |  |  |  |
-
 | CNNs | Transformer | Mamba | UAD |
 |-----|-------------|-------|-----|
 | [UNet](https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28) | [UNetFormer](https://doi.org/10.1016/j.isprsjprs.2022.06.008) | [UrbanSSF](https://doi.org/10.1016/j.isprsjprs.2025.01.017) | [Mean Teacher](https://papers.nips.cc/paper/2017/hash/68053af2923e00204c3ca7c6a3150cf7-Abstract.html) |

@@ -4,7 +4,7 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 
 ## :newspaper:News
 
-* **` Mar. 09th, 2025`**: We updated the [weights](#Model-Zoo) of all the models.
+* **` Mar. 09th, 2025`**: We updated the [weights](#dartmodel-zoo) of all the models.
 * **` Mar. 06th, 2025`**: Our UniDAF project was created and all the code is uploaded! :smiley:
 
 ## :star:Overview

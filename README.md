@@ -1,18 +1,20 @@
 # :star2: Universal rapid building damage assessment: From global scale to local application:star2:
 
+[![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/18918459) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=KotlinWang.UniDAF&left_color=%2363C7E6&right_color=%23CEE75F)
+
 https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 
 ## :newspaper:News
 
-* **` Mar. 09th, 2025`**:  We have uploaded the [weights](#dartmodel-zoo) of all the models and the research datasets ([Zendo](https://zenodo.org/records/18918459)).
-* **` Mar. 06th, 2025`**: Our UniDAF project was created and all the code is uploaded! :smiley:
+* **` Mar. 09th, 2025`**:  We uploaded the [weights](#dartmodel-zoo) and code of UniDAF!
+* **` Mar. 06th, 2025`**: Our UniDAF project is created and all the code is uploaded! :smiley:
 
 ## :star:Overview
 
 ![overview](./assets/unidaf.jpg)
-- UniDAF is the first multi-modal change detection framework for timely post-disaster imagery acquisition. 
-- In view of the interference usually accompanied by timely post-disaster imagery, we combined the fine-grained information of optical imagery and the all-weather observation ability of SAR imagery to establish DamageNet.
-- The occurrence of disasters is highly uncertain, which makes the method of constructing data sets based on sudden disaster events unable to meet the requirements of timely emergency response. Based on this, our DomainStr gradually transfers to the assessment task of sudden disaster events by learning the representation of historical disaster events without additional data annotation.
+- UniDAF is the first multi-modal change detection framework for **timely post-disaster imagery** acquisition. 
+- Given the interference in the imagery acquired in time after a disaster, UniDAF mitigate this problem by combining the fine-grained information of **optical imagery** and the all-weather observation ability of **SAR imagery**.
+- Given the highly unpredictable nature of disasters, UniDAF autonomously learns the characteristic distribution of sudden disaster events based on **domain adaptation**.
 
 ##  :dart:Model Zoo
 
@@ -29,9 +31,11 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 ## :satellite:Dataset Preparation
 <details open>
 <div align="center">
-<img src="./assets/area.jpg" height="60%" width="60%" />
+<img src="./assets/area.jpg" height="70%" width="70%" />
 </div>
 
+- The dataset consists of 13 global-scale disaster events and one Southern California wildfire case study. It covers five types of natural disasters and two types of human-induced disasters. 
+- Notably, the global-scale disaster events used in this study are constructed based on the [BRIGHT](https://essd.copernicus.org/articles/17/6217/2025/essd-17-6217-2025.html).
 
 Please download the study datasetfrom [Zenodo](https://zenodo.org/records/18918459). After the data has been prepared, please make them have the following folder/file structure:
 
@@ -118,12 +122,21 @@ python script/infer_unidaf.py -existing_weight_path ../your weights path -infere
 
 | CNNs | Transformer | Mamba | UAD |
 |-----|-------------|-------|-----|
-| UNet | UNetFormer | UrbanSSF | MeanTeacher |
+| [UNet](https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28) | UNetFormer | UrbanSSF | MeanTeacher |
 | DeepLabv3+ | DamageFormer | ChangeMamba | AdaptSeg |
 | [UANet](https://github.com/Henryjiepanli/Uncertainty-aware-Network) | ChangeFormer |  | AdvEnt |
 | [CFDNet](https://github.com/whf0608/CFDNet) | DamageCAT |  |  |
 | SiamCRNN |  |  |  |
 | ACABFNet |  |  |  |
+
+| CNNs | Transformer | Mamba | UAD |
+|-----|-------------|-------|-----|
+| [UNet](https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28) | [UNetFormer](https://doi.org/10.1016/j.isprsjprs.2022.06.008) | [UrbanSSF](https://doi.org/10.1016/j.isprsjprs.2025.01.017) | [Mean Teacher](https://papers.nips.cc/paper/2017/hash/68053af2923e00204c3ca7c6a3150cf7-Abstract.html) |
+| [DeepLabv3+](https://doi.org/10.1007/978-3-030-01234-2_49) | [DamageFormer](https://ieeexplore.ieee.org/document/9883139/) | [ChangeMamba](https://ieeexplore.ieee.org/document/10565926) | [AdaptSeg](https://openaccess.thecvf.com/content_cvpr_2018/html/Tsai_Learning_to_Adapt_CVPR_2018_paper.html) |
+| [UANet](https://ieeexplore.ieee.org/document/10418227) | [ChangeFormer](https://doi.org/10.1109/IGARSS46834.2022.9883686) |  | [AdvEnt](https://openaccess.thecvf.com/content_CVPR_2019/html/Vu_ADVENT_Adversarial_Entropy_Minimization_for_Domain_Adaptation_in_Semantic_Segmentation_CVPR_2019_paper.html) |
+| [CFDNet](https://doi.org/10.1016/j.isprsjprs.2025.06.028) | [DamageCAT](https://doi.org/10.1016/j.ijdrr.2025.105704) |  |  |
+| [SiamCRNN](https://ieeexplore.ieee.org/document/8937755) | [SiamAttUNet](https://doi.org/10.1016/j.isprsjprs.2021.02.016) |  |  |
+| [ACABFNet](https://ieeexplore.ieee.org/document/9961863) |  |  |  |
 
 </details>
 

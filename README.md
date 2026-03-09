@@ -26,6 +26,38 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 | UniDAF (ResNet-18)    | 94.98       | 56.02   | 41.68    | 44.11      | 59.20  | [Download](https://drive.google.com/file/d/1gTMxqo1-yAZsJgUjV3X44uAyaKo7nsgm/view?usp=sharing) |
 | UniDAF (PVTv2-b3)     | **96.10**  | **66.89** | **49.05** | **56.67**  | **67.18** | [Download](https://drive.google.com/file/d/1UFvcJ5R0q5AjaaLt-r5BYAjlqE2Tv0cp/view?usp=sharing) |
 
+## :satellite:Dataset Preparation
+<details open>
+Please download the study datasetfrom Zenodo. After the data has been prepared, please make them have the following folder/file structure:
+```
+${DATASET_ROOT}   # Dataset root directory, e.g. /home/username/dataset/
+│
+├── DisasterSet
+│   │
+│   ├── pre-event
+│   │    ├── bata-explosion_00000000_pre_disaster.tif
+│   │    ├── bata-explosion_00000001_pre_disaster.tif
+│   │    ├── bata-explosion_00000002_pre_disaster.tif
+│   │    ...
+│   │
+│   ├── post-event-opt
+│   │    ├── bata-explosion_00000000_post_disaster_opt.tif
+│   │    ...
+│		│
+│   ├── post-event-sar
+│   │    ├── bata-explosion_00000000_post_disaster_sar.tif
+│   │    ...
+│   │
+│   └── target
+│        ├── bata-explosion_00000000_building_damage.tif
+│        ...
+│
+└── LA-WildFire
+    ├── ...
+```
+</details>
+
+
 ## :see_no_evil:Visualization
 
 <details open>

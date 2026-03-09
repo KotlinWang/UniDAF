@@ -29,7 +29,7 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 ## :satellite:Dataset Preparation
 <details open>
 <div align="center">
-<img src="./assets/area.jpg" height="40%" width="40%" />
+<img src="./assets/area.jpg" height="50%" width="50%" />
 </div>
 
 

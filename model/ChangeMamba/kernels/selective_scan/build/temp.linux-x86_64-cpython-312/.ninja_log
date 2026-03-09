@@ -1,0 +1,10 @@
+# ninja log v7
+8	15338	1760165742328251014	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cus/selective_scan_core_fwd.o	7128ea7657859460
+0	24380	1760165742320250981	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cus/selective_scan.o	53b51485b453c7f
+4	45583	1760165742324250997	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cus/selective_scan_core_bwd.o	8ae98d50cbddc415
+6	14162	1760165788661434978	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cusndstate/selective_scan_core_fwd.o	3f071e94e05f8e2f
+8	30051	1760165788663434985	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cusndstate/selective_scan_ndstate.o	ab8ae770708f4d18
+4	41535	1760165788659434970	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cusndstate/selective_scan_core_bwd.o	97954fc5f85ebf8a
+3	22865	1760165830701586786	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cusoflex/selective_scan_core_fwd.o	915974ff2b03d26a
+4	31139	1760165830702586789	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cusoflex/selective_scan_oflex.o	926f34b26fabb7fa
+3	72586	1760165830701586786	/home/kotlin/Deeplearning/Change/dfc25_benchmark/Change/model/ChangeMamba/kernels/selective_scan/build/temp.linux-x86_64-cpython-312/csrc/selective_scan/cusoflex/selective_scan_core_bwd.o	551c11bb30822b28

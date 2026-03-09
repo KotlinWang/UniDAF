@@ -1,0 +1,50 @@
+dataset: &dataset_type 'AegisDA'
+root_dir: '/shared/kotlin/DATASET/AegisDA'
+disaster_train_list_dir: './LA_WildFire/source_domain.txt'
+disaster_val_list_dir: './LA_WildFire/target_domain.txt'
+target_event_list: ['los_angeles']
+disaster_train_batch_size: 6
+disaster_eval_batch_size: 1
+crop_size: 512
+
+disaster_epochs: 105
+sk_epochs: 105
+model_param_path: './saved_weights'
+gpu_ids: '3'
+resume: False
+resume_path: None
+learning_rate: 0.0001
+momentum: 0.9
+weight_decay: 0.005
+num_workers: 8
+
+model_type: 'mapping'
+mapping: True
+
+# caformer_s36.sail_in22k_ft_in1k
+# pvt_v2_b5.in1k
+# resnet18.fb_swsl_ig1b_ft_in1k
+# caformer_s18.sail_in1k
+# resnet50.fb_swsl_ig1b_ft_in1k
+backbone: 'pvt_v2_b3.in1k'
+hidden_dim: 128
+loc_classes: 2
+clf_classes: 4
+
+tea_eval_size: 512
+stu_eval_size: 1024
+# EMA parameters
+ema_decay: 0.999
+sup_only_epoch: 0
+ema_update_freq: 1
+# KD params
+kd_temperature: 4.0
+kd_alpha: 0.5
+distillation_start_epoch: 5
+# warmup & grad acc
+warmup_epochs: 5
+gradient_accumulation_steps: 1
+disc_lr_scale: 0.5
+# class-wise thresholds for pseudo labeling, order: [class0, class1, class2, class3]
+class_thresholds: [0.7, 0.6, 0.6, 0.7]
+ratio: 0.33

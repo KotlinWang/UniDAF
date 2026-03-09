@@ -4,7 +4,7 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 
 ## :newspaper:News
 
-* **` Mar. 09th, 2025`**: We updated the [weights](#dartmodel-zoo) of all the models.
+* **` Mar. 09th, 2025`**:  We have uploaded the [weights](#dartmodel-zoo) of all the models and the research datasets ([Zendo](https://zenodo.org/records/18918459)).
 * **` Mar. 06th, 2025`**: Our UniDAF project was created and all the code is uploaded! :smiley:
 
 ## :star:Overview
@@ -29,11 +29,11 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 ## :satellite:Dataset Preparation
 <details open>
 <div align="center">
-<img src="./assets/area.jpg" height="50%" width="50%" />
+<img src="./assets/area.jpg" height="60%" width="60%" />
 </div>
 
 
-Please download the study datasetfrom Zenodo. After the data has been prepared, please make them have the following folder/file structure:
+Please download the study datasetfrom [Zenodo](https://zenodo.org/records/18918459). After the data has been prepared, please make them have the following folder/file structure:
 
 ```
 ${DATASET_ROOT}   # Dataset root directory, e.g. /home/username/dataset/

@@ -28,6 +28,11 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 
 ## :satellite:Dataset Preparation
 <details open>
+<div align="center">
+<img src="./assets/area.jpg" height="40%" width="40%" />
+</div>
+
+
 Please download the study datasetfrom Zenodo. After the data has been prepared, please make them have the following folder/file structure:
 
 ```
@@ -58,28 +63,6 @@ ${DATASET_ROOT}   # Dataset root directory, e.g. /home/username/dataset/
 ```
 </details>
 
-
-
-## :see_no_evil:Visualization
-
-<details open>
-
-##### UAVid
-<div align="center">
-<img src="./assets/uavid.jpg" height="80%" width="80%" />
-</div>
-
-##### Vaihingen
-<div align="center">
-<img src="./assets/vaihingen.jpg" height="80%" width="80%" />
-</div>
-
-##### Potsdam
-<div align="center">
-<img src="./assets/potsdam.jpg" height="80%" width="80%" />
-</div>
-</details>
-
 ## :computer:Installation
 
 <details open>
@@ -87,17 +70,17 @@ ${DATASET_ROOT}   # Dataset root directory, e.g. /home/username/dataset/
 **Step 0**: Clone this project and create a conda environment:
 
    ```shell
-   git clone https://github.com/KotlinWang/UrbanSSF.git
-   cd UrbanSSF
+   git clone https://github.com/KotlinWang/UniDAF.git
+   cd UniDAF
    
-   conda create -n urbanssf python=3.11
-   conda activate urbanssf
+   conda create -n unidaf python=3.12
+   conda activate unidaf
    ```
 
 **Step 1**: Install pytorch and torchvision matching your CUDA version:
 
    ```shell
-   pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
+   pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu129
    ```
 
 **Step 2**: Install requirements:
@@ -106,180 +89,53 @@ ${DATASET_ROOT}   # Dataset root directory, e.g. /home/username/dataset/
    pip install -r requirements.txt
    ```
 
-Change "collections.MutableMapping" in *xxx/envs/urbanssf/lib/python3.11/site-packages/catalyst/tools/registry.py* to "collections.abc.MutableMapping".
-
-**Step 3**: Install Mamba:
-
-   ```shell
-   pip install mamba-ssm==1.2.0.post1
-   
-   pip install causal-conv1d==1.2.0.post2
-   ```
-
-**Step 4**: Replace the content of *xxx/envs/urbanssf/lib/python3.11/site-packages/mamba_ssm/ops/selective_scan_interface.py* with [selective_scan_interface.py](https://drive.google.com/file/d/1hHNJjNkV_-Uurqg07qCXaCPNhu-FESzB/view?usp=drive_link).
-
-</details>
-
-## :satellite:Dataset Preparation
-
-<details open>
-
-Download the [ISPRS Vaihingen, Potsdam](https://www.isprs.org/education/benchmarks/UrbanSemLab/default.aspxdatasets) and [UAVid](https://uavid.nl/) dateset.
-
-**Vaihingen**
-
-Generate the training set.
-```shell
-python tools/vaihingen_patch_split.py \
---img-dir "data/vaihingen/train_images" \
---mask-dir "data/vaihingen/train_masks" \
---output-img-dir "data/vaihingen/train/images_1024" \
---output-mask-dir "data/vaihingen/train/masks_1024" \
---mode "train" --split-size 1024 --stride 512 
-```
-Generate the testing set.
-```shell
-python tools/vaihingen_patch_split.py \
---img-dir "data/vaihingen/test_images" \
---mask-dir "data/vaihingen/test_masks_eroded" \
---output-img-dir "data/vaihingen/test/images_1024" \
---output-mask-dir "data/vaihingen/test/masks_1024" \
---mode "val" --split-size 1024 --stride 1024 \
---eroded
-```
-Generate the masks_1024_rgb (RGB format ground truth labels) for visualization.
-
-````shell
-python tools/vaihingen_patch_split.py \
---img-dir "data/vaihingen/test_images" \
---mask-dir "data/vaihingen/test_masks" \
---output-img-dir "data/vaihingen/test/images_1024" \
---output-mask-dir "data/vaihingen/test/masks_1024_rgb" \
---mode "val" --split-size 1024 --stride 1024 \
---gt
-````
-
-**Potsdam**
-````shell
-python tools/potsdam_patch_split.py \
---img-dir "data/potsdam/train_images" \
---mask-dir "data/potsdam/train_masks" \
---output-img-dir "data/potsdam/train/images_1024" \
---output-mask-dir "data/potsdam/train/masks_1024" \
---mode "train" --split-size 1024 --stride 1024 --rgb-image 
-`````
-As for the validation set, you can select some images from the training set to build it.
-
-````shell
-python tools/potsdam_patch_split.py \
---img-dir "data/potsdam/test_images" \
---mask-dir "data/potsdam/test_masks_eroded" \
---output-img-dir "data/potsdam/test/images_1024" \
---output-mask-dir "data/potsdam/test/masks_1024" \
---mode "val" --split-size 1024 --stride 1024 \
---eroded --rgb-image
-````
-
-```shell
-python tools/potsdam_patch_split.py \
---img-dir "data/potsdam/test_images" \
---mask-dir "data/potsdam/test_masks" \
---output-img-dir "data/potsdam/test/images_1024" \
---output-mask-dir "data/potsdam/test/masks_1024_rgb" \
---mode "val" --split-size 1024 --stride 1024 \
---gt --rgb-image
-```
-
-**UAVid**
-```shell
-python tools/uavid_patch_split.py \
---input-dir "data/uavid/uavid_train_val" \
---output-img-dir "data/uavid/train_val/images" \
---output-mask-dir "data/uavid/train_val/masks" \
---mode 'train' --split-size-h 1024 --split-size-w 1024 \
---stride-h 1024 --stride-w 1024
-```
-
-```shell
-python tools/uavid_patch_split.py \
---input-dir "data/uavid/uavid_train" \
---output-img-dir "data/uavid/train/images" \
---output-mask-dir "data/uavid/train/masks" \
---mode 'train' --split-size-h 1024 --split-size-w 1024 \
---stride-h 1024 --stride-w 1024
-```
-
-```shell
-python tools/uavid_patch_split.py \
---input-dir "data/uavid/uavid_val" \
---output-img-dir "data/uavid/val/images" \
---output-mask-dir "data/uavid/val/masks" \
---mode 'val' --split-size-h 1024 --split-size-w 1024 \
---stride-h 1024 --stride-w 1024
-```
-
 </details>
 
 ## :running: Training
 
-"-c" means the path of the config, use different **config** to train different models.
-
 ```shell
-python train_supervision.py -c config/uavid/urbanss-s.py
+bash train_unidaf.sh configs/unidaf_sk_resnet18.yaml
 ```
 
 If the pre-trained weights download fails, please use: 
 ```shell
-HF_ENDPOINT=https://hf-mirror.com python train_supervision.py -c config/uavid/urbanssf-s.py
+HF_ENDPOINT=https://hf-mirror.com bash train_unidaf.sh configs/unidaf_sk_resnet18.yaml
 ```
 
 ## :mag: Testing
 
-"-c" denotes the path of the config, Use different **config** to test different models. 
+"-existing_weight_path" represents the addition of the weights to be tested.
 
-"-o" denotes the output path 
-
-"--rgb" denotes whether to output masks in RGB format
-
-**Vaihingen**
-```
-python vaihingen_test.py -c config/vaihingen/urbanssf-s.py -o fig_results/vaihingen/urbanssf-s --rgb -t 'None'
-```
-
-**Potsdam**
+"-inferece_saved_path" represents the path where the test result images are saved, including both the color and the original images.
 
 ```
-python potsdam_test.py -c config/potsdam/urbanssf-s.py -o fig_results/potsdam/urbanssf-s --rgb -t 'None'
+python script/infer_unidaf.py -existing_weight_path ../your weights path -inferece_saved_path ./your save path
 ```
 
-**UAVid**
+## :rocket:Supported Networks:
 
-```
-python uavid_test.py -c config/uavid/urbanssf-s.py -o fig_results/uavid/urbanssf-s --rgb -t 'None'
-```
+<details open>
 
-## Acknowledgement
+| CNNs | Transformer | Mamba | UAD |
+|-----|-------------|-------|-----|
+| UNet | UNetFormer | UrbanSSF | MeanTeacher |
+| DeepLabv3+ | DamageFormer | ChangeMamba | AdaptSeg |
+| [UANet](https://github.com/Henryjiepanli/Uncertainty-aware-Network) | ChangeFormer |  | AdvEnt |
+| [CFDNet](https://github.com/whf0608/CFDNet) | DamageCAT |  |  |
+| SiamCRNN |  |  |  |
+| ACABFNet |  |  |  |
 
-- [pytorch lightning](https://www.pytorchlightning.ai/)
-- [timm](https://github.com/rwightman/pytorch-image-models)
-- [pytorch-toolbelt](https://github.com/BloodAxe/pytorch-toolbelt)
-- [mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
-- [UNetFormer](https://github.com/WangLibo1995/GeoSeg)
-- [Vision Mamba](https://github.com/hustvl/Vim)
+</details>
+
+## :handshake:Acknowledgement
+
+The authors would also like to give special thanks to [BRIGHT](https://github.com/ChenHongruixuan/BRIGHT) of Capella Space, [Capella Space's Open Data Gallery](https://www.capellaspace.com/earth-observation/gallery), [Maxar Open Data Program](https://www.maxar.com/open-data) and [GoogleEarth](https://earth.google.com/web) for providing the valuable data.
 
 ## Citation
 
-If you find this project useful in your research, please consider citing：
+If you find this project useful in your research, please consider citing:
+```
+```
 
-```
-@article{WANG2025824,
-title = {Accurate semantic segmentation of very high-resolution remote sensing images considering feature state sequences: From benchmark datasets to urban applications},
-journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
-volume = {220},
-pages = {824-840},
-year = {2025},
-issn = {0924-2716}
-author = {Zijie Wang and Jizheng Yi and Aibin Chen and Lijiang Chen and Hui Lin and Kai Xu}
-}
-```
+
 

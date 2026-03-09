@@ -29,6 +29,7 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 ## :satellite:Dataset Preparation
 <details open>
 Please download the study datasetfrom Zenodo. After the data has been prepared, please make them have the following folder/file structure:
+
 ```
 ${DATASET_ROOT}   # Dataset root directory, e.g. /home/username/dataset/
 │
@@ -56,6 +57,7 @@ ${DATASET_ROOT}   # Dataset root directory, e.g. /home/username/dataset/
     ├── ...
 ```
 </details>
+
 
 
 ## :see_no_evil:Visualization

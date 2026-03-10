@@ -34,7 +34,7 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 <img src="./assets/area.jpg" height="70%" width="70%" />
 </div>
 
-- The dataset consists of 13 global-scale disaster events and one Southern California wildfire case study. It covers five types of natural disasters and two types of human-induced disasters. 
+- The dataset consists of **13 global-scale** disaster events and one **Southern California wildfire** case study. It covers five types of **natural disasters** and two types of **man-made disasters**. 
 - Notably, the global-scale disaster events used in this study are constructed based on the [BRIGHT](https://essd.copernicus.org/articles/17/6217/2025/essd-17-6217-2025.html).
 
 Please download the study datasetfrom [Zenodo](https://zenodo.org/records/18918459). After the data has been prepared, please make them have the following folder/file structure:

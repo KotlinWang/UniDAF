@@ -2,7 +2,7 @@
 
 [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/18918459) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=KotlinWang.UniDAF&left_color=%2363C7E6&right_color=%23CEE75F)
 
-https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
+https://github.com/user-attachments/assets/3f40842c-b0d3-4548-a405-930d1b0bf18b
 
 ## :newspaper:News
 

@@ -1,4 +1,4 @@
-# :earth_asia: Bridging timeliness and reliability in a universal building damage assessment framework: From global-scale datasets to disaster response 
+# :earth_asia: Bridging timeliness and reliability in a universal building damage assessment framework: From global-scale datasets to disaster response :earth_asia:
 
 [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/18918459) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=KotlinWang.UniDAF&left_color=%2363C7E6&right_color=%23CEE75F)
 
@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/dc248175-5aa0-4c4b-ba4a-d3aeb3b28761
 
 ## :newspaper:News
 
-* **` Mar. 09th, 2025`**:  We uploaded the [weights](#dartmodel-zoo) and code of UniDAF!:star2:
+* **` Mar. 09th, 2025`**:  We uploaded the [weights](#dartmodel-zoo) and code of UniDAF!​ :star2:
 * **` Mar. 06th, 2025`**: Our UniDAF project is created and all the code is uploaded! :smiley:
 
 ## :star:Overview

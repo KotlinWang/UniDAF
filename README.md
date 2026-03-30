@@ -15,6 +15,7 @@ https://github.com/user-attachments/assets/3f40842c-b0d3-4548-a405-930d1b0bf18b
 - UniDAF is the first multi-modal change detection framework for **timely post-disaster imagery** acquisition. 
 - Given the interference in the imagery acquired in time after a disaster, UniDAF mitigate this problem by combining the fine-grained information of **optical imagery** and the all-weather observation ability of **SAR imagery**.
 - Given the highly unpredictable nature of disasters, UniDAF autonomously learns the characteristic distribution of sudden disaster events based on **domain adaptation**.
+- 94.51 55.81 29.25 40.84 92.60 68.02 55.10 
 
 ##  :dart:Model Zoo
 
@@ -22,11 +23,11 @@ https://github.com/user-attachments/assets/3f40842c-b0d3-4548-a405-930d1b0bf18b
 |------|-----------|--------|---------|-----------|--------|----------|
 | UniDAF (LA-Wildfire) | 94.50 | 57.94 | 4.59 | 57.78 | 53.70 | [Download](https://drive.google.com/file/d/1Wly0jafTLFumS5n3ZD8OZPGlXPudx7jB/view?usp=sharing) |
 | DamageNet (MobileNet) | 94.62       | 55.47   | 27.35    | 40.18      | 54.41 | [Download](https://drive.google.com/file/d/1nA4hW5w-32yXguO21BsJpyzk9gA5N7Nq/view?usp=sharing) |
-| DamageNet (ResNet-18) | 94.78 | 53.56 | 24.98 | 45.64 | 54.74 | [Download](https://drive.google.com/file/d/1_j58YiQntcirjrq2nZp6fCVD8WTbfs5O/view?usp=sharing) |
+| DamageNet (ResNet-18) | 94.51 | 55.81 | 29.25 | 40.84 | 55.10 | [Download](https://drive.google.com/file/d/13zMy3p1qwd8eWNJCoLhmX_Op5zUw5SpX/view?usp=drive_link) |
 | DamageNet (PVTv2-b3) | 95.93 | 60.42 | 32.83 | 46.83 | 59.00 | [Download](https://drive.google.com/file/d/1jbhKC7sTcDCaHPbHx38j6b53C0HwpEex/view?usp=sharing) |
 | UniDAF (MobileNet)    | 94.11       | 52.34   | 38.20    | 42.20      | 56.71  | [Download](https://drive.google.com/file/d/1zhX2R8poxp2z9Gd5s8AOCon41Dzt-JfX/view?usp=sharing) |
-| UniDAF (ResNet-18)    | 94.98       | 56.02   | 41.68    | 44.11      | 59.20  | [Download](https://drive.google.com/file/d/1gTMxqo1-yAZsJgUjV3X44uAyaKo7nsgm/view?usp=sharing) |
-| UniDAF (PVTv2-b3)     | **96.10**  | **66.89** | **49.05** | **56.67**  | **67.18** | [Download](https://drive.google.com/file/d/1UFvcJ5R0q5AjaaLt-r5BYAjlqE2Tv0cp/view?usp=sharing) |
+| UniDAF (ResNet-18)    | 94.79     | 55.07 | 42.68 | 48.07  | 60.15 | [Download](https://drive.google.com/file/d/1gTMxqo1-yAZsJgUjV3X44uAyaKo7nsgm/view?usp=sharing) |
+| UniDAF (PVTv2-b3)     | **96.10**  | **66.89** | **49.05** | **56.67**  | **67.18** | [Download](https://drive.google.com/file/d/1LRNwDuC1ixcnL7aiRrIwpD-3QoLlXi4K/view?usp=drive_link) |
 
 ## :satellite:Dataset Preparation
 <details open>

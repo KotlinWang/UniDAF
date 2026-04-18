@@ -134,7 +134,7 @@ python script/infer_unidaf.py -existing_weight_path ../your weights path -infere
 
 ## :handshake:Acknowledgement
 
-The authors would also like to give special thanks to [BRIGHT](https://github.com/ChenHongruixuan/BRIGHT) of Capella Space, [Capella Space's Open Data Gallery](https://www.capellaspace.com/earth-observation/gallery), [Maxar Open Data Program](https://www.maxar.com/open-data) and [GoogleEarth](https://earth.google.com/web) for providing the valuable data.
+The authors would also like to give special thanks to [BRIGHT](https://github.com/ChenHongruixuan/BRIGHT) , [Capella Space's Open Data Gallery](https://www.capellaspace.com/earth-observation/gallery) of Capella Space, [Maxar Open Data Program](https://www.maxar.com/open-data) and [GoogleEarth](https://earth.google.com/web) for providing the valuable data.
 
 ## Citation
 

@@ -1,4 +1,4 @@
-# :earth_asia: Bridging timeliness and reliability in a universal building damage assessment framework: From global-scale datasets to disaster response :earth_asia:
+# :earth_asia: UniDAF: Reliability-Aware Multimodal Fusion and Adaptation for Early Cross-Disaster Building Damage Assessment under Degraded Observations :earth_asia:
 
 [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/18918459) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=KotlinWang.UniDAF&left_color=%2363C7E6&right_color=%23CEE75F)
 
@@ -11,11 +11,7 @@ https://github.com/user-attachments/assets/3f40842c-b0d3-4548-a405-930d1b0bf18b
 
 ## :star:Overview
 
-![overview](./assets/unidaf.jpg)
-- UniDAF is the first multi-modal change detection framework for **timely post-disaster imagery** acquisition. 
-- Given the interference in the imagery acquired in time after a disaster, UniDAF mitigate this problem by combining the fine-grained information of **optical imagery** and the all-weather observation ability of **SAR imagery**.
-- Given the highly unpredictable nature of disasters, UniDAF autonomously learns the characteristic distribution of sudden disaster events based on **domain adaptation**.
-- 94.51 55.81 29.25 40.84 92.60 68.02 55.10 
+![overview](./assets/unidaf.jpg)UniDAF is a reliability-aware framework for early post-disaster building damage assessment under degraded observations. It formulates rapid damage mapping as a multimodal cross-disaster learning problem, where pre-disaster optical imagery is combined with timely post-disaster optical and SAR observations.
 
 ##  :dart:Model Zoo
 

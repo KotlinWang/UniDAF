@@ -1,4 +1,4 @@
-# :earth_asia: UniDAF: Reliability-Aware Multimodal Fusion and Adaptation for Early Cross-Disaster Building Damage Assessment under Degraded Observations :earth_asia:
+# :earth_asia: UniDAF: Reliability-Aware Multimodal Cross-Disaster Learning for Early Building Damage Assessment
 
 [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/18918459) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=KotlinWang.UniDAF&left_color=%2363C7E6&right_color=%23CEE75F)
 
